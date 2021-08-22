@@ -23,7 +23,7 @@ Each issue is assigned a severity:
 ❌The main issues are security vulnerabilities that cannot be exploited directly or may require specific conditions to be exploited.   
 🔥Critical issues are security vulnerabilities that can be exploited directly and need to be fixed.  
 
-### 1. ❗ reentrancy-vulnerabilities in function reserveGiveaway()
+### 1. ❗/⚠️ reentrancy-vulnerabilities in function reserveGiveaway()
 
     /*
     * Only valid before the sales starts, for giveaways/team thank you's
@@ -32,7 +32,7 @@ Each issue is assigned a severity:
 
 Not executable by an non-owner user, but an existing vulnerability "reentrancy".
 Solution: Add modifier nonReentrant.  
-Notes: From a practical point of view, it is not a vulnerability, since only owners can attack themselves.
+Notes: From a practical point of view, ❗❗❗ it is not a vulnerability, since only owner can call it.
 ### 2. ❗ No change in function mewnt()
 
     function  mewnt(uint256  numTokens) external  payable  nonReentrant {
@@ -43,8 +43,8 @@ This issue is not an owner vulnerability. However, it can hurt the buyer.
 If `msg.value > calculatePrice().mul(numTokens)` then `change = msg.value - calculatePrice().mul(numTokens)` will not be returned to the buyer.
 Solution: Add change in mewnt(). 
 
-    uint256 change = msg.value - calculatePrice().mul(numTokens);
-    if(change) {
+    uint256 change = msg.value.sub(calculatePrice().mul(numTokens));
+    if(change > 0) {
 	    require(payable(msg.sender).send(change));
     }
 
@@ -63,6 +63,8 @@ vs
         _setTokenURI(currentSupply + index, Strings.strConcat(Strings.uint2str(currentSupply + index), "/index.json"));
     }
 It would be logical to unify this code, which does the same thing in this part.
+owner() always equal msg.sender in reserveGiveaway() because "public onlyOwner".
+
 ### 4. ⚠️. issue in function calculatePrice()
 
     require(hasSaleStarted == true, "Sale hasn't started");
@@ -85,7 +87,7 @@ Literals with many digits are difficult to read and review.
 	     // Return an empty array
 	    return  new  uint256[](0);
     } else {
-It is not obvious that special handling of this case is necessary, since the code below does the same for the case `tokenCount == 0
+It is not obvious that special handling of this case is necessary, since the code below does the same for the case tokenCount == 0
 ### 6. ⚠️.  no function isSaleStarted()
 It would be nice to have a function:
 
