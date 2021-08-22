@@ -17,11 +17,11 @@ https://github.com/77ph/stoner-cats-audit/blob/main/StonerCats-mdreport.md
 
 ## Findings
 
-Each issue is assigned a severity:
-⚠️Minor problems are subjective. Typically, these are suggestions for best practices or readability. It is up to the maintainers of the code to decide whether such problems should be addressed. Just "IMHO"-tag.
-❗Medium issues are objective, but not security vulnerabilities. They should be consulted unless there is a clear reason not to.
-❌The main issues are security vulnerabilities that cannot be exploited directly or may require specific conditions to be exploited. 
-🔥Critical issues are security vulnerabilities that can be exploited directly and need to be fixed.
+Each issue is assigned a severity:  
+⚠️Minor problems are subjective. Typically, these are suggestions for best practices or readability. It is up to the maintainers of the code to decide whether such problems should be addressed. Just "IMHO"-tag.  
+❗Medium issues are objective, but not security vulnerabilities. They should be consulted unless there is a clear reason not to.  
+❌The main issues are security vulnerabilities that cannot be exploited directly or may require specific conditions to be exploited.   
+🔥Critical issues are security vulnerabilities that can be exploited directly and need to be fixed.  
 
 ### 1. ❗ reentrancy-vulnerabilities in function reserveGiveaway()
 
