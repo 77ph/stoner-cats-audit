@@ -31,13 +31,6 @@ Each issue is assigned a severity:
     function  reserveGiveaway(uint256  numTokens) public  onlyOwner {
 
 Not executable by an non-owner user, but an existing vulnerability "reentrancy".
-An example of an attacking code:
-
-    function  reserveGiveawayV1(uint256  numT) public {
-    for (uint i = 0; i < numT; i++) {
-        StonetCatsFactory.reserveGiveaway(i);
-    }
-
 Solution: Add modifier nonReentrant.  
 Notes: From a practical point of view, it is not a vulnerability, since only owners can attack themselves.
 ### 2. ❗ No change in function mewnt()
