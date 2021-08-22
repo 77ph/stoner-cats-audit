@@ -38,7 +38,7 @@ An example of an attacking code:
         StonetCatsFactory.reserveGiveaway(i);
     }
 
-Solution: Add modifier nonReentrant.
+Solution: Add modifier nonReentrant.  
 Notes: From a practical point of view, it is not a vulnerability, since only owners can attack themselves.
 ### 2. ❗ No change in function mewnt()
 
