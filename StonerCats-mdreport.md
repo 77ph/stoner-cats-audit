@@ -1,13 +1,3 @@
-## Sūrya's Description Report
-
-### Files Description Table
-
-
-|  File Name  |  SHA-1 Hash  |
-|-------------|--------------|
-| ../contracts/StonerCats.sol | 245c328cc83bdbea3a8b4335faac017d02246dec |
-
-
 ### Contracts Description Table
 
 
