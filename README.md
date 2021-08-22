@@ -4,16 +4,16 @@ Ethereum contract "Stoner Cats" was taken for audit.
 DAppRadar link https://dappradar.com/ethereum/collectibles/stoner-cats  
 https://etherscan.io/address/0xd4d871419714b778ebec2e22c7c53572b573706e#code  
 The review is taken based on the contract code deployed by address: 0xd4d871419714b778ebec2e22c7c53572b573706e. 
-The list of files in the area can be found in the Appendix.
+The list of files in the area can be found in the Appendix.  
 ## Objectives:
-Verifying that the system has been implemented as intended and without unexpected edge cases.
-Identification of well-known vulnerabilities in smart contracts.
-Particular attention is paid to preventing attacks that can lead to the loss of system / user funds.
+Verifying that the system has been implemented as intended and without unexpected edge cases.  
+Identification of well-known vulnerabilities in smart contracts.  
+Particular attention is paid to preventing attacks that can lead to the loss of system / user funds.  
 ## System Overview
 
-https://github.com/77ph/stoner-cats-audit/blob/main/StonerCats-inheritance.png
-https://github.com/77ph/stoner-cats-audit/blob/main/StonerCats-graph.png
-https://github.com/77ph/stoner-cats-audit/blob/main/StonerCats-mdreport.md
+https://github.com/77ph/stoner-cats-audit/blob/main/StonerCats-inheritance.png  
+https://github.com/77ph/stoner-cats-audit/blob/main/StonerCats-graph.png  
+https://github.com/77ph/stoner-cats-audit/blob/main/StonerCats-mdreport.md  
 
 ## Findings
 
