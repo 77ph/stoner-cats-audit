@@ -1,8 +1,8 @@
 # Stoner Cats Audit
 
 Ethereum contract "Stoner Cats" was taken for audit.
-DAppRadar link https://dappradar.com/ethereum/collectibles/stoner-cats
-https://etherscan.io/address/0xd4d871419714b778ebec2e22c7c53572b573706e#code
+DAppRadar link https://dappradar.com/ethereum/collectibles/stoner-cats  
+https://etherscan.io/address/0xd4d871419714b778ebec2e22c7c53572b573706e#code  
 The review is taken based on the contract code deployed by address: 0xd4d871419714b778ebec2e22c7c53572b573706e. 
 The list of files in the area can be found in the Appendix.
 ## Objectives:
