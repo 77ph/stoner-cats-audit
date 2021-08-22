@@ -100,6 +100,34 @@ Then
 
 could be announced as "private".
 
+## Token Metadata ERC721
+Every NFT is identified by a unique uint256 ID inside the ERC-721 smart contract. 
+The URI may point to a JSON file that conforms to the "ERC721 Metadata JSON Schema".
+
+Not directly related to this contract (ERC721 standard), but a more general problem is the centralized presentation of meta information for a decentralized token.
+
+https://nftschool.dev/reference/metadata-schemas/#linking-to-nft-assets  
+https://docs.ipfs.io/how-to/best-practices-for-nft-data/#types-of-ipfs-links-and-when-to-use-them  
+
+The only way to solve this contradiction within the framework of existing technologies is to use IPFS.
+https://docs.ipfs.io/how-to/best-practices-for-nft-data/#metadata  
+
+In the project under consideration, this is solved through a special header in the response of the centralized service:
+< x-ipfs-path: /ipns/quick-senior-square-griffin.fission.app/json/1/index.json
+
+Example:
+curl -L -k -v https://go.fission.app/json/1/index.json  
+curl -L -k -v https://ipfs.io/ipns/quick-senior-square-griffin.fission.app/json/1/index.json  
+
+curl -L -k -v https://go.fission.app/json/1/image.jpg  
+curl -L -k -v https://ipfs.io/ipns/quick-senior-square-griffin.fission.app/json/1/image.jpg  
+
+Thus, it can be assumed that information can be accessed through IPFS. 
+
+https://eips.ethereum.org/EIPS/eip-721  
+Details of the problem here:
+https://eips.ethereum.org/EIPS/eip-2477
+
 # Appendix
 https://github.com/77ph/stoner-cats-audit/blob/main/StonerCats-flattern.sol
 
